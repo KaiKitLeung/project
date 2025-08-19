@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './navbar.jsx';
-import Home from './home.jsx';
+import Project from './project.jsx';
 import About from './about.jsx'
 import Test from './Test.jsx'
 
@@ -17,7 +17,7 @@ export default function App() {
       <Navbar />
       <Routes>
         <Route path="/project" element={<Test />} />
-        <Route path="/project/home" element={<Home />} />
+        <Route path="/project/project" element={<Project />} />
         <Route path="/project/about" element={<About />} />
         <Route path="/project/contact" element={<Contact />} />
       </Routes>

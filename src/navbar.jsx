@@ -1,35 +1,15 @@
-import React from 'react';
-import { Link } from 'react-router-dom'; // if using React Router
+import { Link } from 'react-router-dom';
 
 export default function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container-fluid">
-        <a className="navbar-brand" href="/">MyWebsite</a>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
+        <div className="navbar-nav d-flex flex-row">
+          <a className="navbar-brand" href="/project/">Welcome</a>
 
-        <div className="navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav ms-auto">
-            <li className="nav-item">
-              <Link className="nav-link" to="/project/home">Home</Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/project/about">About</Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/project/contact">Contact</Link>
-            </li>
-          </ul>
+          <Link className="nav-link px-2" to="/project/project">Project</Link>
+          <Link className="nav-link px-2" to="/project/about">About</Link>
+          <Link className="nav-link px-2" to="/project/contact">Contact</Link>
         </div>
       </div>
     </nav>

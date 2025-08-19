@@ -1,0 +1,57 @@
+:root {
+  --bg: #ffffff;
+  --text: #111827;
+  --muted: #6b7280;
+  --primary: #2563eb;
+  --card: #f3f4f6;
+  --border: #e5e7eb;
+}
+:root[data-theme="dark"] {
+  --bg: #0b0f19;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --primary: #60a5fa;
+  --card: #111827;
+  --border: #1f2937;
+}
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: var(--bg); color: var(--text);
+}
+
+/* Layout */
+.nav {
+  position: sticky; top: 0; z-index: 100;
+  display: flex; align-items: center; gap: 1rem;
+  padding: .75rem 1rem; border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(6px); background: color-mix(in oklab, var(--bg) 85%, transparent);
+}
+.brand { font-weight: 700; text-decoration: none; color: var(--text); }
+.nav-links { margin-left: auto; display: flex; gap: 1rem; }
+.nav a { color: var(--text); text-decoration: none; opacity: .9; }
+.nav a:hover { opacity: 1; }
+.toggle { margin-left: .5rem; background: none; border: 1px solid var(--border); padding: .4rem .6rem; border-radius: .5rem; color: var(--text); cursor: pointer; }
+
+.section { padding: 64px 0; border-bottom: 1px solid var(--border); }
+.container { width: min(1100px, 92vw); margin: 0 auto; }
+.narrow { width: min(760px, 92vw); }
+
+.hero { padding: 88px 0; }
+.hero-inner { display: grid; grid-template-columns: 1.3fr .7fr; gap: 2rem; align-items: center; }
+.subtitle { color: var(--muted); margin-top: .25rem; }
+.avatar { width: 240px; height: 240px; border-radius: 50%; object-fit: cover; justify-self: center; border: 6px solid var(--border); }
+
+.cta { display: flex; gap: .75rem; margin-top: 1rem; }
+.btn { display: inline-block; padding: .6rem 1rem; border-radius: .6rem; border: 1px solid var(--border); text-decoration: none; color: var(--text); }
+.btn.primary { background: var(--primary); color: white; border-color: transparent; }
+.btn.ghost { background: transparent; }
+
+.tags { display: flex; flex-wrap: wrap; gap: .5rem; padding: 0; margin: .5rem 0 0; list-style: none; }
+.tags li { padding: .4rem .6rem; border: 1px solid var(--border); border-radius: .6rem; background: var(--card); }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; }
+.card { ba
