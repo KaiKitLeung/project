@@ -36,9 +36,6 @@ export default function Home() {
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a>'
           />
-          <Marker position={position}>
-            <Popup>📍 Center of Hong Kong</Popup>
-          </Marker>
           <GeoJSON
             data={geodata}
             style={(feature) => ({
