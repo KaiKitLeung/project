@@ -4,11 +4,9 @@ import Navbar from './navbar.jsx';
 import Project from './project.jsx';
 import About from './about.jsx'
 import Test from './Test.jsx'
+import Contact from './contact.jsx'
 
 
-function Contact() {
-  return <h2 className="mt-4 text-center">📞 Contact Page</h2>;
-}
 
 export default function App() {
   return (
